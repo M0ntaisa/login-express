@@ -31,6 +31,23 @@ app.post("/regis", async (req, res) => {
 
 })
 
+app.post("/login", async (req, res) => {
+  
+  try {
+    const check = await collection.findOne({ username: req.body.username })
+
+    if (check.password === req.body.password) {
+      res.render("home")
+    } else {
+      res.send("Wrong password!")
+    }
+  } catch {
+    res.send("Wrong detail")
+  }
+
+
+})
+
 app.listen(3000, () => {
   console.log("we're connected to port 3000")
 })
