@@ -1,15 +1,17 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const hbs = require('hbs')
+// const hbs = require('hbs')
 const collection = require('./mongodb')
 
 const templatePath = path.join(__dirname,'../templates')
+const publicPath = path.join(__dirname, '../public')
 
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "hbs")
 app.set("views", templatePath)
+app.use(express.static(publicPath));
 
 app.get("/", (req, res) => {
   res.render("login")

@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: grid;
+  place-items: center;
+}
+
+/* Style the form container */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Style the form header */
+.title-form {
+  text-align: center;
+}
+
+/* Style the form input fields */
+.input {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #f2f2f2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Style the form submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Style the registration link */
+.link {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #4CAF50;
+}
